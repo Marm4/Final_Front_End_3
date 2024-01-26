@@ -5,6 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #283B42;
+  color: #D1DDD8;
+}
+
+
+body.light {
+  background-color: white;
+  color: black;
+}
+
+/* Estilo para el tema oscuro */
+body.dark {
+  background-color: black;
+  color: white;
 }
 
 code {
@@ -14,25 +28,59 @@ code {
 .favButton{
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
+  margin-bottom: 20px;
   border: none;
   width: 100%;
   cursor: pointer;
+  color: #D1DDD8;
+}
+
+.themeButton{
+  background-color: #2F1812;
+  padding: 10px;
+  margin: 0.7vw 1vw 0 0;
+  border: none;
+  width: 20vw;
+  height: 2vw;
+  cursor: pointer;
+  color: #f5f5f5;
+  border-radius: 5px;
+  border-color: #f5f5f5;
+  border-style:groove ;
+  border-width: 0.5px;
+  font-weight: bold;
 }
 
 h1{
   text-align: center;
+  padding: 2vw 0 2vw 0;
 }
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
+  padding: 0.2vw;
+  background-color: #2F1812;
+}
+
+nav a{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  
+  width: 100vw;
+  padding-left: 30vw;
+  padding-right: 20vw;
 }
 
 a{
-  color: #000;
+  color: #D1DDD8;
   text-decoration: none;
+  font-size: 13px;
   margin: 5px;
   cursor: pointer;
 }
@@ -64,19 +112,22 @@ footer > p{
 form{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
+  justify-content:flex-start;
+  width: 35vw;
+  height: 15vw;
   margin: 0 auto;
 }
 
 .card{
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content:flex-end;
   flex-direction: column;
   align-items: center;
-  width: 200px;
+  width: 250px;
+  height: 250px;
   padding: 0.5rem 0.5rem 0 0.5rem;
+  margin-bottom: 20px;
   border: 0.5px solid rgb(136, 136, 136);
 }
 
@@ -94,14 +145,18 @@ form{
   margin: 0 auto;
 }
 
-table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
-
+.card a{
+    padding-bottom: 4vw;
 }
+
+table {
+  border-collapse: collapse;
+     border-spacing: 0;
+     width: 100%;
+     display: table;
+     border: 1px solid #ccc;
+ 
+ }
 
 td, th {
   border: 1px solid #dddddd;
@@ -120,3 +175,131 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 15%;
+  justify-content: space-between;
+  overflow-x: auto;
+  padding:2vw 0 2vw 0;
+  width: 70vw;
+  max-height: 40vw;
+  position:relative;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 200px; 
+  margin-right: 10px; 
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+.contact h2{
+  display: flex;
+  justify-content: center; 
+}
+
+.contact p{
+  display: flex;
+  justify-content: center; 
+}
+
+
+.divform{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 35vw;
+  margin-left: 32vw;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  padding-left: 8vw;
+  margin-bottom: 90px;
+  
+}
+
+.contact h1 {
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  padding-left: 8vw;
+}
+
+.contact input,
+textarea {
+  display: flex;
+  width: 50%;
+  padding: 8px;
+  margin-left:15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact textarea{
+  padding-bottom: 50px;
+}
+
+
+
+.contact button {
+  display: flex;
+  justify-content: center;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 9vw;
+  margin-left: 5vw;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.contact button:hover {
+  background-color: #45a049;
+}
+
+.contact p {
+  margin-top: 10px;
+}
+
+.contact h1{
+  padding: 0 0 3vw 0;
+  
+}
+
+.detail{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 36vw;
+  margin-top: 3vw;
+  width: 25vw;
+  height: 25vw;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
